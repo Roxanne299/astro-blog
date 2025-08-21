@@ -16,6 +16,10 @@ const cssExtend = {
   ':root': {
     '--prose-borders': '#eee',
   },
+  // 增加文章内容区域宽度
+	   '.prose': {
+	       'max-width': 'none',
+	         },
 
   'code::before,code::after': {
     content: 'none',
@@ -34,6 +38,36 @@ const cssExtend = {
   'li': {
     'white-space': 'normal',
     'word-wrap': 'break-word',
+  },
+  // 添加轻量级表格样式
+  'table': {
+    'border-collapse': 'collapse',
+    'margin': '1rem 0',
+    'width': '100%',
+  },
+
+  'th, td': {
+    'border': '2px solid #d1d5db',
+    'padding': '0.5rem 0.75rem',
+    'text-align': 'left',
+  },
+
+  'th': {
+    'background-color': '#f9fafb',
+    'font-weight': '500',
+    'border-bottom': '2px solid #9ca3af',
+    'color': '#374151',
+  },
+
+  // 深色主题下的表格样式
+  ':root.dark th, :root.dark td': {
+    'border': '2px solid #4b5563',
+  },
+
+  ':root.dark th': {
+    'background-color': '#374151',
+    'color': '#f3f4f6',
+    'border-bottom': '2px solid #6b7280',
   },
 }
 
