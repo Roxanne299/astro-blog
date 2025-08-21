@@ -1,169 +1,51 @@
 ---
-title: Starlight 🌟 Build documentation sites with Astro
-head:
-  - tag: title
-    content: Starlight 🌟 Build documentation sites with Astro
-description: Starlight helps you build beautiful, high-performance documentation websites with Astro.
+title: 欢迎看我逼逼赖赖
+description: 记录技术成长，分享学习心得，探索编程之美
 template: splash
-editUrl: false
-lastUpdated: false
-banner:
-  content: |
-    Updating to Astro 5?
-    <a href="https://github.com/withastro/starlight/releases/tag/%40astrojs/starlight%400.30.0">
-      Learn how to upgrade
-    </a>
 hero:
-  title: Make your docs shine with Starlight
-  tagline: Everything you need to build a stellar documentation website. Fast, accessible, and easy-to-use.
+  tagline: 欢迎看我逼逼赖赖
   image:
-    file: ~/assets/hero-star.webp
+    file: ../../assets/hero-star.webp
   actions:
-    - text: Get started
+    - text: 技术分享
+      link: /technical/
       icon: right-arrow
-      link: /getting-started/
-    - text: View on GitHub
-      icon: external
+    - text: 算法学习
+      link: /algorithm/
       variant: minimal
-      link: https://github.com/withastro/starlight
 ---
 
-import { CardGrid, Card } from '@astrojs/starlight/components';
-import AboutAstro from '~/components/about-astro.astro';
-import TestimonialGrid from '~/components/testimonial-grid.astro';
-import Testimonial from '~/components/testimonial.astro';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 这里有什么
 
 <CardGrid stagger>
-	<Card title="Documentation that delights" icon="open-book">
-		Includes: Site navigation, search, internationalization, SEO, easy-to-read
-		typography, code highlighting, dark mode and more.
-	</Card>
-	<Card title="Powered by Astro" icon="rocket">
-		Leverage the full power and performance of Astro. Extend Starlight with your
-		favorite Astro integrations and libraries.
-	</Card>
-	<Card title="Markdown, Markdoc, and MDX" icon="document">
-		Bring your favorite markup language. Starlight gives you built-in
-		frontmatter validation with TypeScript type-safety.
-	</Card>
-	<Card title="Bring your own UI components" icon="puzzle">
-		Starlight ships as a framework-agnostic, complete docs solution. Extend with
-		React, Vue, Svelte, Solid, and more.
-	</Card>
+  <Card title="🖥️ 技术随笔" icon="laptop" href="/technical/">
+    工作中遇到的一些技术问题和思考，偶尔也会记录学到的新东西
+  </Card>
+  <Card title="🧮 刷题记录" icon="puzzle" href="/algorithm/">
+    周末闲着没事刷刷题，顺便记录一下有意思的算法
+  </Card>
+  <Card title="💰 理财日记" icon="approve-check" href="/investment/">
+    作为工程师也要学点理财知识，免得工资都存余额宝
+  </Card>
 </CardGrid>
 
-<TestimonialGrid title="What people are saying">
-  <Testimonial
-    name="Rachel"
-    handle="rachelnabors"
-    cite="https://twitter.com/astrodotbuild/status/1724934718745915558"
-  >
-    The Astro team have EVOLVED how docs can be done and you can get it all out of the box with their Starlight project.
-  </Testimonial>
-  <Testimonial
-    name="Flavio"
-    handle="flaviocopes"
-    cite="https://twitter.com/flaviocopes/status/1738237658717905108"
-  >
-    Astro’s official starter kit Starlight is a truly incredible tool for building a documentation website
-  </Testimonial>
-  <Testimonial
-    name="Tomek"
-    handle="sulco"
-    cite="https://twitter.com/sulco/status/1735610348730802342"
-  >
-    Starlight is our go-to example of a great DX: the speed, convenience, and
-    attention to details is inspiring. It takes care of the tech and the looks,
-    so you can focus on your content 👏
+## 最新文章
 
-    StackBlitz team absolutely loves it!
+近期更新的技术文章，涵盖了从基础理论到实战应用的各个方面：
 
-  </Testimonial>
-  <Testimonial
-    name="Roberto"
-    handle="RmeetsH"
-    cite="https://twitter.com/RmeetsH/status/1735783992018760090"
-  >
-    Starlight has been a game-changer for me, allowing me to focus on content creation.
+- **[MySQL 高可用架构体系](/technical/database/mysql01/)** - 深入解析3M、QMHA、PXC三种高可用方案
+- **[多线程模型中的优雅停机问题](/technical/concurrency/graceful-shutdown/)** - 生产者-消费者模型下的线程管理
+- **[AI Agent 与 MCP 协议架构详解](/technical/ai/mcp01/)** - 最新的AI应用架构分析
+- **[工作流平台架构设计](/technical/architecture/tech-arch01/)** - 解决嵌套执行中的分层架构冲突
 
-    Its intuitive design not only streamlines my workflow but also reduces onboarding time for open-source developers.
+## 关于我
 
-  </Testimonial>
-  <Testimonial
-    name="Joel"
-    handle="jhooks"
-    cite="https://twitter.com/jhooks/status/1727405160547418405"
-  >
-    Spent some more time with Starlight for the Course Builder docs and it’s been great so far. Lots of nice touches and can focus on writing in Markdown and not fiddling with the site.
-  </Testimonial>
-  <Testimonial
-    name="Rick"
-    handle="rick_viscomi"
-    cite="https://twitter.com/rick_viscomi/status/1665867447910510593"
-  >
-    Started playing with Starlight. Gotta say I’m very impressed with the performance out of the box.
+我是一名在去哪儿网工作的 Java 后端开发工程师，平时主要写一些业务代码。家里养了只暹罗猫叫"年糕"，是个小霸王，经常把我从电脑前赶走去给它铲屎。
 
-    💯💯💯💯
+工作之余喜欢折腾一些技术，偶尔刷刷算法题保持手感。最近迷上了《塞尔达传说》，经常熬夜探索海拉鲁大陆，第二天上班就犯困。
 
-  </Testimonial>
-  <Testimonial
-    name="Nicolas"
-    handle="beaussan"
-    cite="https://twitter.com/beaussan/status/1735625189583466893"
-  >
-    Starlight is the best way to get started with documentation, between the
-    power and speed of Astro, and the tooling from Starlight, it’s a match in
-    heaven.
+这个博客主要记录一些工作和学习中的想法，内容比较杂乱，有技术的、有算法的，也有一些理财方面的思考。写得不算出彩，就当是自己的一个小角落，偶尔整理整理思路。
 
-    It has been my go to for a while now, and I keep on loving it!
-
-  </Testimonial>
-  <Testimonial
-    name="Sylwia"
-    handle="SylwiaVargas"
-    cite="https://x.com/SylwiaVargas/status/1726556825741578286"
-  >
-    I used Starlight in my last job and loved it. Great components, intuitive
-    design, and super-responsive community (whenever anyone needed something,
-    they’d ship it soonish or tell you a workaround). Very pleasant experience.
-  </Testimonial>
-  <Testimonial
-    name="Lou Cyx"
-    handle="loucyx"
-    cite="https://elk.zone/m.webtoo.ls/@loucyx@mastodon.social/111587380021362284"
-  >
-    The docs on my monorepo site look better than ever thanks to Starlight. It’s extremely easy to use without losing all the power of Astro. Thank you for working on it!
-  </Testimonial>
-  <Testimonial
-    name="BowTiedWebReaper"
-    handle="BowTiedWebReapr"
-    cite="https://twitter.com/BowTiedWebReapr/status/1735633399501697517"
-  >
-    Starlight is my go-to tool for documentation. It made it super easy to add docs to my existing Astro product website, vs needing a subdomain to use with another tool.
-  </Testimonial>
-  <Testimonial
-    name="Jeff"
-    handle="J_Everhart383"
-    cite="https://twitter.com/J_Everhart383/status/1691900590048292908"
-  >
-    I’ve been rebuilding the WPEngine Atlas Platform docs. Trust me when I say Starlight has everything you need to make an A+ docs platform&nbsp;🙌
-  </Testimonial>
-  <Testimonial
-    name="Chloe"
-    handle="solelychloe"
-    cite="https://twitter.com/solelychloe/status/1695115277602628082"
-  >
-    Give Starlight a try!
-
-    I use it for a few of my sites and it’s great.
-
-  </Testimonial>
-</TestimonialGrid>
-
-<AboutAstro title="Brought to you by">
-Astro is the all-in-one web framework designed for speed.
-Pull your content from anywhere and deploy everywhere, all powered by your favorite UI components and libraries.
-
-[Learn about Astro](https://astro.build/)
-
-</AboutAstro>
+如果你恰好路过，欢迎随便看看！
