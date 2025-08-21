@@ -3,4 +3,4 @@ title: 关于
 pubDate: 2024-12-06
 ---
 
-此主题系 Hexo 主题 <a href="https://github.com/sumimakito/hexo-theme-typography">活版印字</a> 在 Astro 平台上的移植版本
+A passionate Java Backend Developer working at Qunar. Proud cat dad of "Niangao" – a playful Siamese who runs the house. I write about tech and life on my blog, sharing insights and experiences. Feel free to connect and nice to meet you!
