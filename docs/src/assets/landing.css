@@ -25,3 +25,30 @@
 [data-has-hero] .hero > img {
 	filter: drop-shadow(0 0 3rem var(--overlay-blurple));
 }
+
+/* Card hover animations */
+.card-grid .card {
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.card-grid .card:hover {
+	transform: translateY(-8px) scale(1.02);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-grid .card:hover .icon {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+
+.card-grid .card .icon {
+	transition: transform 0.3s ease;
+}
+
+/* Add slight glow effect on hover */
+.card-grid .card:hover {
+	box-shadow: 
+		0 12px 24px rgba(0, 0, 0, 0.15),
+		0 0 20px var(--overlay-blurple);
+}
