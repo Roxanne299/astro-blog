@@ -31,6 +31,24 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   </Card>
 </CardGrid>
 
+<script>
+// Ensure cards are clickable in production
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.card[href], .card a');
+  cards.forEach(card => {
+    const href = card.getAttribute('href') || card.closest('[href]')?.getAttribute('href');
+    if (href) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', function(e) {
+        if (e.target.tagName !== 'A') {
+          window.location.href = href;
+        }
+      });
+    }
+  });
+});
+</script>
+
 ## 最新文章
 
 近期更新的文章，涵盖了技术、算法和投资理财的各个方面：

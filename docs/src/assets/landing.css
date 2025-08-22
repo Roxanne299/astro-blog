@@ -26,48 +26,32 @@
 	filter: drop-shadow(0 0 3rem var(--overlay-blurple));
 }
 
-/* Card hover animations */
-.card-grid .card {
-	transition: all 0.3s ease;
-	cursor: pointer;
-	position: relative;
-	z-index: 1;
+/* Card hover animations - universal approach for both dev and production */
+.not-content .card,
+[astro-icon] ~ .card,
+.card {
+	transition: all 0.3s ease !important;
+	cursor: pointer !important;
+	position: relative !important;
 }
 
-.card-grid .card:hover {
-	transform: translateY(-8px) scale(1.02);
+.not-content .card:hover,
+[astro-icon] ~ .card:hover,
+.card:hover {
+	transform: translateY(-8px) scale(1.02) !important;
 	box-shadow: 
-		0 12px 24px rgba(0, 0, 0, 0.15),
-		0 0 20px var(--overlay-blurple);
-	z-index: 2;
+		0 12px 24px rgba(0, 0, 0, 0.15) !important,
+		0 0 20px var(--overlay-blurple) !important;
 }
 
-.card-grid .card:hover .icon {
-	transform: scale(1.1);
-	transition: transform 0.3s ease;
+/* Target icon animations */
+.card:hover [astro-icon],
+.card:hover .icon {
+	transform: scale(1.1) !important;
+	transition: transform 0.3s ease !important;
 }
 
-.card-grid .card .icon {
-	transition: transform 0.3s ease;
-}
-
-/* Ensure card links are clickable */
-.card-grid .card a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 3;
-	text-decoration: none;
-}
-
-/* Override any pointer-events issues */
-.card-grid .card * {
-	pointer-events: none;
-}
-
-.card-grid .card,
-.card-grid .card a {
-	pointer-events: auto;
+.card [astro-icon],
+.card .icon {
+	transition: transform 0.3s ease !important;
 }
