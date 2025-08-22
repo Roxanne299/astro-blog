@@ -28,7 +28,7 @@ export default defineConfig({
 			},
 			lastUpdated: true,
 			editLink: {
-				baseUrl: 'https://github.com/Roxanne299/jdyun-blog/edit/main/docs/',
+				baseUrl: 'https://github.com/Roxanne299/astro-blog/edit/starlight/docs/',
 			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/Roxanne299/' },

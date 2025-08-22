@@ -30,11 +30,16 @@
 .card-grid .card {
 	transition: all 0.3s ease;
 	cursor: pointer;
+	position: relative;
+	z-index: 1;
 }
 
 .card-grid .card:hover {
 	transform: translateY(-8px) scale(1.02);
-	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+	box-shadow: 
+		0 12px 24px rgba(0, 0, 0, 0.15),
+		0 0 20px var(--overlay-blurple);
+	z-index: 2;
 }
 
 .card-grid .card:hover .icon {
@@ -46,9 +51,23 @@
 	transition: transform 0.3s ease;
 }
 
-/* Add slight glow effect on hover */
-.card-grid .card:hover {
-	box-shadow: 
-		0 12px 24px rgba(0, 0, 0, 0.15),
-		0 0 20px var(--overlay-blurple);
+/* Ensure card links are clickable */
+.card-grid .card a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	text-decoration: none;
+}
+
+/* Override any pointer-events issues */
+.card-grid .card * {
+	pointer-events: none;
+}
+
+.card-grid .card,
+.card-grid .card a {
+	pointer-events: auto;
 }
